@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Archive</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= LOGIN ================= -->
+
+    <section id="loginPage" class="login-page">
+
+        <div class="login-brand">
+
+            <h1>My Archive</h1>
+
+            <p>
+                A place for everything worth keeping.
+            </p>
+
+        </div>
+
+
+        <div class="login-card">
+
+            <h2>Welcome</h2>
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    autocomplete="username"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    autocomplete="current-password"
+                >
+
+            </div>
+
+
+            <button
+                id="loginButton"
+                class="submit-button"
+            >
+                Submit
+            </button>
+
+            <p
+                id="loginError"
+                class="login-error"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WORKSPACE ================= -->
+
+    <section
+        id="workspacePage"
+        class="workspace-page hidden"
+    >
+
+        <!-- TOP BAR -->
+
+        <header class="top-bar">
+
+            <button
+                id="menuButton"
+                class="menu-button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <button
+                id="newButton"
+                class="new-button"
+            >
+                + New
+            </button>
+
+        </header>
+
+
+        <!-- MENU -->
+
+        <div
+            id="menuPanel"
+            class="menu-panel hidden"
+        >
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+
+        <!-- WORKSPACE CONTENT -->
+
+        <main class="workspace-content">
+
+            <h1 class="workspace-title">
+                My Archive
+            </h1>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-container">
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search your archive..."
+                >
+
+            </div>
+
+
+            <!-- NOTES -->
+
+            <div
+                id="notesContainer"
+                class="notes-container"
+            >
+            </div>
+
+
+            <!-- EMPTY MESSAGE -->
+
+            <div
+                id="emptyMessage"
+                class="empty-message"
+            >
+                No notes yet.
+                <br>
+                Click <strong>+ New</strong> to create your first note.
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- ================= NOTE EDITOR ================= -->
+
+    <section
+        id="notePage"
+        class="note-page hidden"
+    >
+
+        <header class="note-top-bar">
+
+            <button
+                id="backButton"
+                class="back-button"
+            >
+                &lt; Back
+            </button>
+
+        </header>
+
+
+        <main class="note-editor-container">
+
+            <div class="note-header">
+
+                <input
+                    type="text"
+                    id="noteTitle"
+                    class="note-title"
+                    placeholder="Note name"
+                >
+
+                <div class="note-actions">
+
+                    <button
+                        id="renameButton"
+                        class="secondary-button"
+                    >
+                        Rename
+                    </button>
+
+                    <button
+                        id="saveButton"
+                        class="primary-button"
+                    >
+                        Save
+                    </button>
+
+                    <button
+                        id="deleteButton"
+                        class="delete-button"
+                    >
+                        Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="noteContent"
+                class="note-content"
+                placeholder="Start writing..."
+            ></textarea>
+
+        </main>
+
+    </section>
+
+
+    <!-- ================= NEW NOTE NAME MODAL ================= -->
+
+    <div
+        id="nameModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-card">
+
+            <h2>Name your note</h2>
+
+            <input
+                type="text"
+                id="newNoteName"
+                placeholder="Enter note name"
+            >
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancelNameButton"
+                    class="secondary-button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="confirmNameButton"
+                    class="primary-button"
+                >
+                    Save
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= RENAME MODAL ================= -->
+
+    <div
+        id="renameModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-card">
+
+            <h2>Rename note</h2>
+
+            <input
+                type="text"
+                id="renameInput"
+                placeholder="New note name"
+            >
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancelRenameButton"
+                    class="secondary-button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="confirmRenameButton"
+                    class="primary-button"
+                >
+                    Rename
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
