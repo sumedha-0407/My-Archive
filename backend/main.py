@@ -21,7 +21,7 @@ app = FastAPI(title="MyArchive")
 
 # IMPORTANT:
 # Change this before putting the website online.
-SESSION_SECRET = "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET"
+SESSION_SECRET = "the secret is that this a dubakoor website yet useful"
 
 app.add_middleware(
     SessionMiddleware,
